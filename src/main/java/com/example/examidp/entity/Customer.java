@@ -9,19 +9,17 @@ public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "full_name")
+    private String fullName;
+
+    @Column(name = "birthday")
     private String birthday;
-    private String fullname;
+
+    @Column(name = "address")
     private String address;
-    private Number phonenumber;
 
-    public Customer(String fullname, String birthday, String address, Number phonenumber) {
-        this.fullname = fullname;
-        this.birthday = birthday;
-        this.address= address;
-        this.phonenumber = phonenumber;
-    }
+    @Column(name = "phone_number")
+    private String phoneNumber;
 
-    public Customer() {
-
-    }
 }

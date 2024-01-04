@@ -14,16 +14,22 @@ public class CustomerServiceImpl implements CustomerService {
     private CustomerRepository customerRepository;
 
     @Override
-    public void saveCustomer(Customer customer) {
+    public List<Customer> getAllCustomer() {
+        return null;
+    }
+
+    @Override
+    public Customer createCustomer(Customer customer) {
         try {
-            customerRepository.save(customer);
-        } catch (Exception ex) {
-            System.out.println(ex.getMessage());
+            return customerRepository.save(customer);
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+            return new Customer();
         }
     }
 
     @Override
-    public List<Customer> getAllCustomer() {
+    public List<Customer> findAllCustomers() {
         return customerRepository.findAll();
     }
 }

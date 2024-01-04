@@ -5,7 +5,10 @@ import com.example.examidp.entity.Customer;
 import java.util.List;
 
 public interface CustomerService {
-    void saveCustomer(Customer customer);
 
     List<Customer> getAllCustomer();
+
+    Customer createCustomer(Customer customer);
+
+    List<Customer> findAllCustomers();
 }

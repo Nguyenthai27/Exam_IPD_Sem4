@@ -13,13 +13,13 @@
         <th>Age</th>
         <th>Address</th>
     </tr>
-    <c:forEach var="customer" items="${customers}" varStatus="loop">
+    <c:forEach var="customerController" items="${customers}" varStatus="loop">
         <tr>
             <td>${loop.index + 1}</td>
-            <td>${customer.fullname}</td>
-            <td>${customer.birthday}</td>
-            <td>${customer.address}</td>
-            <td>${customer.phonenumber}</td>
+            <td>${customerController.fullname}</td>
+            <td>${customerController.birthday}</td>
+            <td>${customerController.address}</td>
+            <td>${customerController.phonenumber}</td>
         </tr>
     </c:forEach>
 </table>
